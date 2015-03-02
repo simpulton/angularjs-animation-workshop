@@ -1,7 +1,7 @@
 AngularJS Animation Workshop
 ========================
 
-This is the project files for my AngularJS animations workshop.
+These are the project files for my AngularJS animations workshop.
 
 ### Setup ###
 ```
