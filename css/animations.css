@@ -1,0 +1,50 @@
+/*
+Panel Animations
+*/
+
+.panel-animation.ng-enter, .panel-animation.ng-leave {
+    -webkit-transition:0.5s linear all;
+    transition:0.5s linear all;
+}
+
+.panel-animation.ng-enter {
+    opacity:0;
+    left: 860px;
+
+}
+.panel-animation.ng-enter.ng-enter-active {
+    opacity:1;
+    left: 0px;
+}
+
+.panel-animation.ng-leave {
+    opacity:1;
+    left: 0px;
+}
+.panel-animation.ng-leave.ng-leave-active {
+    opacity:0;
+    left: -430px;
+}
+
+/*
+BG Animations
+*/
+
+.bg-animation.ng-enter, .bg-animation.ng-leave {
+    -webkit-transition:0.5s linear all;
+    transition:0.5s linear all;
+}
+
+.bg-animation.ng-enter {
+    opacity:0;
+}
+.bg-animation.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+.bg-animation.ng-leave {
+    opacity:1;
+}
+.bg-animation.ng-leave.ng-leave-active {
+    opacity:0;
+}

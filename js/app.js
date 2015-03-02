@@ -1,9 +1,11 @@
-angular.module('website', [])
+angular.module('website', [
+  'ngAnimate'
+])
   .controller('MainCtrl', function ($scope) {
     $scope.pages = {
-      'home': {label: 'Home', sublabel: 'Sublabel', content: 'This is page content.'},
-      'about': {label: 'About', sublabel: 'Sublabel', content: 'This is page content.'},
-      'contact': {label: 'Contact', sublabel: 'Sublabel', content: 'This is page content.'}
+      'home': {label: 'Home', sublabel: 'Welcome home!', content: 'This is the home page.'},
+      'about': {label: 'About', sublabel: 'About us!', content: 'This is the about page.'},
+      'contact': {label: 'Contact', sublabel: 'Contact us!', content: 'This is the contact page.'}
     };
 
     $scope.currentPage = 'home';

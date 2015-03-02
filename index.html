@@ -6,24 +6,19 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
   </head>
 
   <body ng-controller="MainCtrl">
 
     <img class="logo" src="images/superlogo.png" alt="logo">
 
-    <img bg class="fullBg" ng-if="isCurrentPage('home')" src="images/bg00.jpg">
-    <img bg class="fullBg" ng-if="isCurrentPage('about')" src="images/bg01.jpg">
-    <img bg class="fullBg" ng-if="isCurrentPage('contact')" src="images/bg02.jpg">
+    <img bg class="fullBg bg-animation" ng-if="isCurrentPage('home')" src="images/bg00.jpg">
+    <img bg class="fullBg bg-animation" ng-if="isCurrentPage('about')" src="images/bg01.jpg">
+    <img bg class="fullBg bg-animation" ng-if="isCurrentPage('contact')" src="images/bg02.jpg">
 
-    <div class="panel panel-animation" ng-hide="isInTransit">
-      <div>
-        <h1 class="blue">{{page.label}}</h1>
-
-        <h3>{{page.sublabel}}</h3>
-
-        <p>{{page.content}}</p>
-      </div>
+    <div class="panel-container">
+      <div ng-include="currentPage" class="panel panel-animation"></div>
     </div>
 
     <ul class="nav nav-pills">
@@ -31,6 +26,37 @@
       <li ng-class="{'active':isCurrentPage('about')}"><a ng-click="setCurrentPage('about')">ABOUT</a></li>
       <li ng-class="{'active':isCurrentPage('contact')}"><a ng-click="setCurrentPage('contact')">CONTACT</a></li>
     </ul>
+
+    <!-- TEMPLATES -->
+    <script type="text/ng-template" id="home">
+      <div>
+        <h1 class="blue">Home</h1>
+
+        <h3>Welcome Home!</h3>
+
+        <p>Bacon ipsum dolor amet tri-tip flank shank tenderloin sausage, landjaeger cow salami jerky hamburger. Pork belly t-bone shoulder cow rump. Spare ribs swine flank, venison tri-tip filet mignon pastrami pork chop ham hock chuck pork boudin fatback.</p>
+      </div>
+    </script>
+
+    <script type="text/ng-template" id="about">
+      <div>
+        <h1 class="red">About</h1>
+
+        <h3>About Us!</h3>
+
+        <p>Bacon ipsum dolor amet tri-tip flank shank tenderloin sausage, landjaeger cow salami jerky hamburger. Pork belly t-bone shoulder cow rump. Spare ribs swine flank, venison tri-tip filet mignon pastrami pork chop ham hock chuck pork boudin fatback.</p>
+      </div>
+    </script>
+
+    <script type="text/ng-template" id="contact">
+      <div>
+        <h1 class="green">Contact</h1>
+
+        <h3>Contact Us!</h3>
+
+        <p>Bacon ipsum dolor amet tri-tip flank shank tenderloin sausage, landjaeger cow salami jerky hamburger. Pork belly t-bone shoulder cow rump. Spare ribs swine flank, venison tri-tip filet mignon pastrami pork chop ham hock chuck pork boudin fatback.</p>
+      </div>
+    </script>
 
     <script src="libs/jquery.min.js"></script>
     <script src="libs/TweenMax.min.js"></script>
