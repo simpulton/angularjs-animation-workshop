@@ -1,14 +1,14 @@
-An Animated Website Using AngularJS and TweenMax
+AngularJS Animation Workshop
 ========================
 
-Full page website using AngularJS v1.2 ngAnimate and TweenMax from Greensock GSAP.
+This is the project files for my AngularJS animations workshop.
 
 
 Resources
 ========================
 
-Animation in AngularJS 1.2 Slides
-http://slid.es/gsklee/animation-in-angularjs-12
+One Hungry Mind
+http://onehungrymind.com/
 
 Year of Moo
 http://www.yearofmoo.com/
