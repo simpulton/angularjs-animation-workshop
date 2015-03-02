@@ -1,50 +1,107 @@
 /*
 Panel Animations
 */
-
-.panel-animation.ng-enter, .panel-animation.ng-leave {
-    -webkit-transition:0.5s linear all;
-    transition:0.5s linear all;
+.my-panel-animation.ng-enter {
+    -webkit-animation: 0.5s panel-animation-enter;
+    animation: 0.5s panel-animation-enter;
 }
 
-.panel-animation.ng-enter {
-    opacity:0;
-    left: 860px;
-
-}
-.panel-animation.ng-enter.ng-enter-active {
-    opacity:1;
-    left: 0px;
+.my-panel-animation.ng-leave {
+    -webkit-animation: 0.5s panel-animation-leave;
+    animation: 0.5s panel-animation-leave;
 }
 
-.panel-animation.ng-leave {
-    opacity:1;
-    left: 0px;
+@keyframes panel-animation-enter {
+    from {
+        opacity:0;
+        left: 860px;
+    }
+    to {
+        opacity:1;
+        left: 0px;
+    }
 }
-.panel-animation.ng-leave.ng-leave-active {
-    opacity:0;
-    left: -430px;
+
+@keyframes panel-animation-leave {
+    from {
+        opacity:1;
+        left: 0px;
+    }
+    to {
+        opacity:0;
+        left: -430px;
+    }
 }
+
+@-webkit-keyframes panel-animation-enter {
+    from {
+        opacity:0;
+        left: 860px;
+    }
+    to {
+        opacity:1;
+        left: 0px;
+    }
+}
+
+@-webkit-keyframes panel-animation-leave {
+    from {
+        opacity:1;
+        left: 0px;
+    }
+    to {
+        opacity:0;
+        left: -430px;
+    }
+}
+
 
 /*
 BG Animations
 */
 
-.bg-animation.ng-enter, .bg-animation.ng-leave {
-    -webkit-transition:0.5s linear all;
-    transition:0.5s linear all;
+.my-bg-animation.ng-enter {
+    -webkit-animation: 0.5s bg-animation-enter;
+    animation: 0.5s bg-animation-enter;
 }
 
-.bg-animation.ng-enter {
-    opacity:0;
-}
-.bg-animation.ng-enter.ng-enter-active {
-    opacity:1;
+.my-bg-animation.ng-leave {
+    -webkit-animation: 0.5s bg-animation-leave;
+    animation: 0.5s bg-animation-leave;
 }
 
-.bg-animation.ng-leave {
-    opacity:1;
+@keyframes bg-animation-enter {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
-.bg-animation.ng-leave.ng-leave-active {
-    opacity:0;
+
+@keyframes bg-animation-leave {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes bg-animation-enter {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes bg-animation-leave {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
 }
