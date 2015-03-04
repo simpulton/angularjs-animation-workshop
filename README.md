@@ -3,7 +3,8 @@ AngularJS Animation Workshop
 
 These are the project files for my AngularJS animations workshop.
 
-#Challenge#
+###Challenge###
+
 Choose the branch that you want to work with and modify the transition from page to page entirely. Bonus points awarded for best implementation.
 
 ### Setup ###
